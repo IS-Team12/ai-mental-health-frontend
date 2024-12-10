@@ -1,0 +1,317 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: all 0.4s ease;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dark-mode-label {
+    font-size: 14px;
+    color: inherit;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+/* Home Page Styles */
+.home-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.home-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.home-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.home-button {
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    color: white;
+    background-color: #2196F3;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.home-button:hover {
+    background-color: #1976D2;
+}
+
+body.dark-mode .home-button {
+    background-color: #1E88E5;
+}
+
+body.dark-mode .home-button:hover {
+    background-color: #1565C0;
+}
+
+/* Signup Page Container */
+.container {
+    background-color: white;
+    padding: 20px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px; /* Adjusted width for signup page */
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.form-title {
+    font-size: 22px; /* Reduced title size */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Signup Page Input Containers */
+.form-row {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: left; 
+}
+
+input, select, button {
+    width: 100%; /* Ensures all elements (input, select, and button) have equal width */
+    padding: 12px; /* Adjusted padding for consistent spacing */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px; /* Adjusted font size */
+    transition: all 0.4s ease;
+    box-sizing: border-box; /* Ensures consistent box model for all elements */
+}
+
+body.dark-mode input, body.dark-mode select, body.dark-mode button {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 10px; /* Add consistent spacing between form fields and the button */
+}
+
+button:hover {
+    background-color: #ff4a3a;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border: 1px solid #2196F3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ff4a3a;
+}
+
+/* Chatbot Container */
+.chat-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+body.dark-mode .chat-container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Chatbot Message Styling */
+.bot-message {
+    background-color: #ffe6e6; /* Light pink background for bot messages */
+    color: #5a1a1a; /* Dark red text for bot messages */
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px 0;
+    text-align: left;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-weight: bold; /* Makes bot messages visually distinct */
+    box-shadow: 0 2px 4px rgba(90, 26, 26, 0.2); /* Subtle shadow effect */
+    border-left: 4px solid #d32f2f; /* Adds a red border to highlight the bot's response */
+}
+
+body.dark-mode .bot-message {
+    background-color: #442222; /* Dark red background for bot messages in dark mode */
+    color: #ffa1a1; /* Light pink text for bot messages in dark mode */
+    border-left: 4px solid #ff6f61; /* Adjusted border color for dark mode */
+    box-shadow: 0 2px 4px rgba(255, 161, 161, 0.2); /* Subtle shadow effect */
+}
+
+/* User Message Styling */
+.user-message {
+    background-color: #e6ffe6; /* Light green background for user messages */
+    color: #1a5a1a; /* Dark green text for user messages */
+    padding: 10px;
+    border-radius: 15px;
+    margin: 10px 0;
+    text-align: right;
+    max-width: 75%;
+    word-wrap: break-word;
+    font-size: 15px; /* Slightly increased font size for user messages */
+    box-shadow: 0 2px 4px rgba(26, 90, 26, 0.2); /* Subtle shadow effect */
+    border-right: 4px solid #2e7d32; /* Adds a green border to highlight the user's message */
+}
+
+body.dark-mode .user-message {
+    background-color: #224422; /* Dark green background for user messages in dark mode */
+    color: #a1ffa1; /* Light green text for user messages in dark mode */
+    border-right: 4px solid #66bb6a; /* Adjusted border color for dark mode */
+    box-shadow: 0 2px 4px rgba(161, 255, 161, 0.2); /* Subtle shadow effect */
+}
+
+/* Input Area */
+.msger-inputarea {
+    display: flex;
+    flex-direction: column; /* Stacks the input box and send button vertically */
+    gap: 10px;
+    margin-bottom: 10px; /* Adds space between input box and messages */
+}
+
+.msger-input {
+    width: 100%; /* Makes input box span the full width */
+    padding: 12px; /* Adjusted padding for better visibility */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .msger-input {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.msger-input:focus {
+    outline: none;
+    border: 1px solid #2196F3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+}
+
+/* Send Button */
+.msger-send-btn {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end; /* Aligns the send button to the right */
+    width: 100%; /* Matches the width of the input box */
+}
+
+.msger-send-btn:hover {
+    background-color: #ff4a3a;
+}
